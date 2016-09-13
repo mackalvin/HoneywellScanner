@@ -33,6 +33,16 @@
         <source-file src="src/ios/CDVHoneywellScanner.mm" />
 
         <framework src="ExternalAccessory.framework" />
+        
+        <!-- Add plist  -->
+        <config-file target="*-Info.plist" parent="UISupportedExternalAccessoryProtocols">
+            <array>
+                <string>com.honeywell.scansled.protocol.decoder</string>
+                <string>com.honeywell.scansled.protocol.msr</string>
+                <string>com.honeywell.scansled.protocol.pm</string>
+            </array>
+        </config-file>
+        
     </platform>
 
 </plugin>
